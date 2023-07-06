@@ -142,7 +142,10 @@ function App() {
       <Dialog
         modalType="alert"
         open={dialog}
-        onOpenChange={(event, data) => setDialog(data.open)}
+        onOpenChange={(event, data) => {
+          console.log(event);
+          setDialog(data.open);
+        }}
       >
         <DialogSurface>
           <DialogBody>
